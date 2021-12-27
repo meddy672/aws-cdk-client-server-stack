@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>S3 Site</title>
+</head>
+<body>
+    <h1>This is a S3 static website</h1>
+    <p id="hello">Loading message from Lambda...</p>
+
+    <script>
+        const xhr = new XMLHttpRequest(),
+        method = "GET",
+        url = "https://cgjsb60oaj.execute-api.us-east-1.amazonaws.com/";
+
+        xhr.open(method, url, true);
+        xhr.onreadystatechange = function () {
+        if(xhr.readyState === XMLHttpRequest.DONE) {
+            var status = xhr.status;
+            if (status === 0 || (status >= 200 && status < 400)) {
+            
+            const message = xhr.responseText;
+            console.log(xhr.responseText);
+            document.getElementById("hello").innerHTML = message;
+
+            } else {
+                throw new Error("There was an error reading data from the server: " + xhr.statusText);
+            }
+        }
+        };
+        xhr.send();
+
+    </script>
+</body>
+</html>
