@@ -1,4 +1,5 @@
 # Basic Client Server
+[See Demo](http://thesimplewebservicestack-meddy672s3staticwebsite5-16j9bwu3gzk60.s3-website-us-east-1.amazonaws.com/)
 
 This is a basic client-server CDK stack. The stack has a S3 bucket which is configured to host a static website, an API Gateway and Lambda function to handle HTTP request, and a DynamoDB that contains the data. This is the most basic of implementations and would have to be hardened before production use.
 
@@ -17,7 +18,7 @@ This is a basic client-server CDK stack. The stack has a S3 bucket which is conf
 3. [AWS CDK](https://aws.amazon.com/solutions/constructs/patterns/?constructs-master-cards.sort-by=item.additionalFields.headline&constructs-master-cards.sort-order=asc&awsf.constructs-master-filter-tech-categories=*all&awsf.constructs-master-filter-products=*all)
 
 ## Usage
-To use this code you just need to install the software and to update the your bucket name.  After deployment you should have a S3 bucket with a URL you can visit to see you application in action. 
+To use this code, just install the software and update your bucket name, and if you would like, change the table name. You will also need to add some items to your database. After deployment you should have a bucket with a URL you can visit which will fetch data from the database and display it to the user. 
 
 ## Useful commands
 
