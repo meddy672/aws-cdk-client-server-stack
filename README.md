@@ -1,4 +1,4 @@
-# Basic Client Server
+# Basic Client Serverless
 [See Demo](http://thesimplewebservicestack-meddy672s3staticwebsite5-16j9bwu3gzk60.s3-website-us-east-1.amazonaws.com/)
 
 This is a basic client-server CDK stack. The stack has a S3 bucket which is configured to host a static website, an API Gateway and Lambda function to handle HTTP request, and a DynamoDB that contains the data. This is the most basic of implementations and would have to be hardened before production use.
